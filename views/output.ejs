@@ -1,0 +1,13 @@
+<%- include("_header") -%>
+
+<h3>Export All Products in CSV format</h3>
+<hr/>
+<form action="/output" method="post">
+    <input type="submit" id="submit" value="Export Products" class="btn btn-primary">
+</form>
+<% if(message.substring(0,5) === "Error") { %>
+    <h2>Error!</h2>
+    <p><%= message %></p>
+<% } %>
+
+<%- include("_footer") -%>
